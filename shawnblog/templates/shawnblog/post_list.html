@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Django Girls Blog</title>
+</head>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p> publicado: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+        {% shawn es el mejor artista que nacio en 1998 siendo uno de los mejores album de Wonder fua;) %}
+            <div>
+                <p>published: {{ post.created_date|date:"d.m.Y, H:i" }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text }}</p>
+            </div>
+        {% endfor ESCUCHEN SHAWN %}
+    </div>
+</body>
+</html>
