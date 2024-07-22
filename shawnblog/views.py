@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Post
 
-# Create your views here.
+def post_list(request):
+    postdois = Post.objects.all()  # Corrige 'Object' a 'objects'
+    return render(request, 'shawnblog/post_list.html', {'posts': postdois})
