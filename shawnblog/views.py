@@ -8,7 +8,7 @@ def post_list(request):
 
 def bebidas_view(request):
     postdois = Post.objects.all()  # Corrige 'Object' a 'objects'
-    return render(request, 'shawnblog/bebidas.html',{'posts': postdois})
+    return render(request, 'bebidas.html',{'posts': postdois})
 
 
 
