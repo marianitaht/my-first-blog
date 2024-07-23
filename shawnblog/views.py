@@ -3,12 +3,12 @@ from django.shortcuts import render
 from .models import Post
 
 def post_list(request):
-    postdois = Post.objects.all()  # Corrige 'Object' a 'objects'
-    return render(request, 'shawnblog/post_list.html', {'posts': postdois})
+    post_list = Post.objects.all()
+    return render(request, 'shawnblog/post_list.html', {'posts': post_list})
 
 def bebidas_view(request):
-    postdois = Post.objects.all()  # Corrige 'Object' a 'objects'
-    return render(request, 'bebidas.html',{'posts': postdois})
+    post_list = Post.objects.all()  # Cambia 'Post' por el modelo que estés utilizando
+    return render(request, 'bebidas.html', {'posts': post_list})
 
 
 
